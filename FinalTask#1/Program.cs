@@ -6,7 +6,19 @@ N = 8 -> "8, 7, 6, 5, 4, 3, 2, 1" */
 
 Console.WriteLine("Hello! Input the number N please");
 int N = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine($"N = {N} -> '{Rec(N)}'");
+while (true)
+{
+    if (N <= 0)
+    {
+        Console.WriteLine("Input a positive number");
+        N = Convert.ToInt32(Console.ReadLine());
+    }
+    else
+    {
+        Console.WriteLine($"N = {N} -> '{Rec(N)}'");
+        break;
+    }
+}
 
 string Rec(int N)
 {
